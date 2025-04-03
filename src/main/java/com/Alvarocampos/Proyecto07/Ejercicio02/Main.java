@@ -1,4 +1,4 @@
-package com.Alvarocampos.Proyecto07.Ejercicio2;
+package com.Alvarocampos.Proyecto07.Ejercicio02;
 
 import java.util.ArrayList;
 import java.util.Arrays;

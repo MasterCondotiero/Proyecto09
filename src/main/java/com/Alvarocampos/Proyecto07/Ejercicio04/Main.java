@@ -1,4 +1,4 @@
-package com.Alvarocampos.Proyecto07.Ejercicio4;
+package com.Alvarocampos.Proyecto07.Ejercicio04;
 
 public class Main {
     public static void main(String[] args) {
