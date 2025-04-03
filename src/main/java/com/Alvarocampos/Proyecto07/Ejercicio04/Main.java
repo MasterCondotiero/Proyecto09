@@ -6,8 +6,8 @@ public class Main {
 
         // Añade valores aleatorios
         cola.add(10);
-        cola.add(20);
-        cola.add(30);
+        cola.add(60);
+        cola.add(12);
         System.out.println("Cola despues de añadir elementos:  " + cola);
 
         // Eliminando elementos

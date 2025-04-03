@@ -4,17 +4,17 @@ class Main {
     public static void main(String[] args) {
         Pila<Integer> pila = new Pila<>();
 
-        // Añadir valores aleatorios
+        // Añade valores aleatorios
         pila.push(10);
-        pila.push(20);
-        pila.push(30);
-        System.out.println("Pila después de añadir elementos: " + pila);
+        pila.push(60);
+        pila.push(12);
+        System.out.println("Pila despues de añadir elementos: " + pila);
 
-        // Borrar un elemento
+        // Borra un elemento
         System.out.println("Elemento eliminado: " + pila.pop());
-        System.out.println("Pila después de eliminar un elemento: " + pila);
+        System.out.println("Pila despues de eliminar un elemento: " + pila);
 
-        // Consultar el elemento superior
+        // Consulta el elemento superior
         System.out.println("Elemento en la cima: " + pila.top());
     }
 }
