@@ -5,9 +5,7 @@ import java.util.ArrayList;
 class Pila<T> implements IPila<T> {
     private ArrayList<T> data;
 
-    public Pila() {
-        data = new ArrayList<>();
-    }
+    public Pila() { data = new ArrayList<>(); }
 
     @Override
     public T push(T e) {
@@ -24,9 +22,7 @@ class Pila<T> implements IPila<T> {
     }
 
     @Override
-    public int size() {
-        return data.size();
-    }
+    public int size() { return data.size(); }
 
     @Override
     public T top() {
@@ -37,13 +33,9 @@ class Pila<T> implements IPila<T> {
     }
 
     @Override
-    public boolean isEmpty() {
-        return data.isEmpty();
-    }
+    public boolean isEmpty() { return data.isEmpty(); }
 
     @Override
-    public String toString() {
-        return data.toString();
-    }
+    public String toString() { return data.toString(); }
 }
 

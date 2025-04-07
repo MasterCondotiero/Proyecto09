@@ -1,31 +1,36 @@
 package com.Alvarocampos.Proyecto07.Ejercicio02;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ArrayListEstadisticas implements IEstadisticas {
-    private ArrayList<Double> datos;
-
-    public ArrayListEstadisticas(ArrayList<Double> datos) {
-        this.datos = datos;
-    }
-
+public class ArrayListEstadisticas extends ArrayList<Double> implements IEstadisticas {
     @Override
     public double minimo() {
-        return Collections.min(datos);
+        double min = Double.MAX_VALUE;
+        for (double valor : this){
+            if (valor<min){
+                min=valor;
+            }
+        }
+        return min;
     }
 
     @Override
     public double maximo() {
-        return Collections.max(datos);
+        double max = Double.MAX_VALUE;
+        for (double valor : this){
+            if (valor>max){
+                max=valor;
+            }
+        }
+        return max;
     }
 
     @Override
     public double sumatorio() {
         double suma = 0;
-        for (double num : datos) {
+        for (double num : this) {
             suma += num;
         }
         return suma;
@@ -33,20 +38,20 @@ public class ArrayListEstadisticas implements IEstadisticas {
 
     @Override
     public double media() {
-        if (datos.isEmpty()) return 0;
-        return sumatorio() / datos.size();
+        if (this.isEmpty()) return 0;
+        return sumatorio() / this.size();
     }
 
     @Override
     public double moda() {
-        if (datos.isEmpty()) return Double.NaN;
+        if (this.isEmpty()) return Double.NaN;
 
         Map<Double, Integer> frecuencia = new HashMap<>();
-        for (double num : datos) {
+        for (double num : this) {
             frecuencia.put(num, frecuencia.getOrDefault(num, 0) + 1);
         }
 
-        double moda = datos.get(0);
+        double moda = this.get(0);
         int maxFrecuencia = 0;
         for (Map.Entry<Double, Integer> entry : frecuencia.entrySet()) {
             if (entry.getValue() > maxFrecuencia) {
