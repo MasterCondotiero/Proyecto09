@@ -7,12 +7,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Paciente> pacientes = new ArrayList<>();
-        pacientes.add(new Paciente("Godofreda", LocalDate.of(1980,02,03) , Sexo.F, 57, 1.63));
-        pacientes.add(new Paciente("Eustaquio", LocalDate.of(1998,12,17), Sexo.M, 60.5, 1.74));
-        pacientes.add(new Paciente("Gertrudis", LocalDate.of(2007,02,03), Sexo.F, 50.8, 1.62));
-        pacientes.add(new Paciente("Alex", LocalDate.of(1870,8,25), null, 72.5, 1.78));
-        pacientes.add(new Paciente("Segismundo", LocalDate.of(1980,7,6), Sexo.M, 85.2, 1.80));
-        pacientes.add(new Paciente("Pablo", LocalDate.of(1980,7,6), Sexo.M, 100.8, 1.80));
+        pacientes.add(new Paciente("Godofreda", LocalDate.of(1980,02,03) , Sexo.F, 1.63, 49));
+        pacientes.add(new Paciente("Eustaquio", LocalDate.of(1998,12,17), Sexo.M, 1.74, 60.5));
+        pacientes.add(new Paciente("Gertrudis", LocalDate.of(2007,02,03), Sexo.F, 1.62, 50.8));
+        pacientes.add(new Paciente("Alex", LocalDate.of(1870,8,25),  1.78, 72.5));
+        pacientes.add(new Paciente("Segismundo", LocalDate.of(1980,7,6), Sexo.M, 1.80,  85.2));
+        pacientes.add(new Paciente("Pablo", LocalDate.of(1980,7,6), Sexo.M, 1.80, 200.8));
 
         int[] edades = GestionPaciente.majorMenor(pacientes);
         int[] sexos = GestionPaciente.pacientsPerSexe(pacientes);
