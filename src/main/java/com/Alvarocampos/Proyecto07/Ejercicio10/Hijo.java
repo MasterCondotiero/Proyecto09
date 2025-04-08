@@ -20,6 +20,12 @@ class Hijo {
         return fechaNacimiento;
     }
 
+    public int getEdad(){
+        LocalDate now = LocalDate.now();
+        Period periodo = Period.between(fechaNacimiento, now);
+        return periodo.getYears();
+    }
+
     @Override
     public String toString() {
         return nombre + " ("

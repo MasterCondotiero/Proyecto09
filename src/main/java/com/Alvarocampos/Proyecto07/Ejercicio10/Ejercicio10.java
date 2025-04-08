@@ -178,8 +178,8 @@ public class Ejercicio10 {
         int edadMin = leerEntero("Edad mínima: ");
         int edadMax = leerEntero("Edad máxima: ");
         empleados.values().stream()
-                .filter(e -> {
-                    int edad = Period.between(e.getFechaNacimiento(), LocalDate.now()).getYears();
+                .filter(emp -> {
+                    int edad = Period.between(emp.getFechaNacimiento(), LocalDate.now()).getYears();
                     return edad >= edadMin && edad <= edadMax;
                 })
                 .forEach(System.out::println);
@@ -189,23 +189,15 @@ public class Ejercicio10 {
         double sueldoMin = leerDouble("Sueldo mínimo: ");
         double sueldoMax = leerDouble("Sueldo máximo: ");
         empleados.values().stream()
-                .filter(e -> e.getSueldo() >= sueldoMin && e.getSueldo() <= sueldoMax)
+                .filter(emp -> emp.getSueldo() >= sueldoMin && emp.getSueldo() <= sueldoMax)
                 .forEach(System.out::println);
     }
 
     static void buscarPorHijosMenores() {
-        /* empleados.values().stream()
-                .filter(e -> e.getHijos().stream().anyMatch(h -> h.getEdad() < 18))
+        int edadMenor = 18;
+        empleados.values().stream()
+                .filter(emp -> emp.getHijos().stream().anyMatch(h-> h.getEdad() < edadMenor))
                 .forEach(System.out::println);
-
-        int edadMin = leerEntero("Edad mínima: "); */
-
-        /* empleados.values().stream()
-                .filter(e -> {
-                    int edad = Period.between(e.getFechaNacimiento(), LocalDate.now()).getYears();
-                    return edad >= edadMin;
-                })
-                .forEach(System.out::println); */
     }
 
     static void generarEmpleadosAleatorios(int cantidad) {
@@ -236,4 +228,3 @@ public class Ejercicio10 {
         return Double.parseDouble(scanner.nextLine());
     }
 }
-
