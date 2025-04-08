@@ -31,4 +31,5 @@ public class GestionPaciente {
         }
         return new int[]{hombres, mujeres};
     }
+
 }

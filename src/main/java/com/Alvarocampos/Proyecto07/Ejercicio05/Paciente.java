@@ -9,7 +9,7 @@ public class Paciente {
     private final String nombre;
     private final LocalDate fechaNacimiento;
     private Sexo sexo;
-    private double altura;                          // en metros
+    private double altura;                              // en metros
     private double peso;                               // en Kg
     private static int contadorId = 1;
 
